@@ -7,7 +7,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Card from '../../components/Card';
 import { Link } from 'react-router-dom';
-import { ourCustomers, techsList } from '../data/data';
+import { ourCustomers, techsList } from '../../data/data';
 
 const Home = () => {
     return (
@@ -246,7 +246,7 @@ const Home = () => {
                     <div className="grid gap-y-4 sm:grid-cols-3 sm:gap-4 md:gap-6">
                         {techsList.map(({ name, images, desc }) => (
                             <Card className="relative top-0 hover:md:-top-4 transition-all duration-100">
-                                <section className="flex flex-col gap-3 p-5 rounded-lg shadow-lg bg-white">
+                                <section className="h-full flex flex-col gap-3 p-5 rounded-lg shadow-lg bg-white ">
                                     <div className="grid grid-cols-3 auto-rows-[60px] gap-4">
                                         {images.map((image) => (
                                             <div className="bg-sky-400/20 grid items-center rounded-md">

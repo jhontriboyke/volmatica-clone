@@ -1,1 +1,4 @@
 https://volmatica.com/
+
+todo
+1. build web apps and staff pages

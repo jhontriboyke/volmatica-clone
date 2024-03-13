@@ -2,8 +2,12 @@ import { Bars3Icon } from '@heroicons/react/16/solid';
 import Sidebar from './Sidebar';
 import { useState } from 'react';
 import {
+    BuildingOffice2Icon,
+    ChartBarIcon,
     ChevronDownIcon,
     ComputerDesktopIcon,
+    CpuChipIcon,
+    TrophyIcon,
 } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
@@ -14,13 +18,13 @@ const Navbar = () => {
         <nav className="p-5 shadow-lg sticky top-0 z-10 bg-white border-b border-slate-200">
             <div className="flex flex-row justify-between items-center max-w-[1200px] mx-auto">
                 <div>
-                    <div className="h-8">
+                    <Link to={'/'} className="block h-8">
                         <img
                             className="h-full"
                             src="\illustration\logo.png"
                             alt="Logo"
                         />
-                    </div>
+                    </Link>
                 </div>
                 <div className="hidden xl:block">
                     <ul className="flex flex-row items-center gap-16">
@@ -32,11 +36,11 @@ const Navbar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li className="relative">
-                            <div
-                                onClick={() => setServicesShow(!servicesShow)}
-                                className=" group flex flex-row items-center gap-2 cursor-pointer"
-                            >
+                        <li
+                            onClick={() => setServicesShow(!servicesShow)}
+                            className="relative"
+                        >
+                            <div className=" group flex flex-row items-center gap-2 cursor-pointer">
                                 <span className=" group-hover:text-sky-400/80 transition-colors duration-200">
                                     Service
                                 </span>{' '}
@@ -55,39 +59,39 @@ const Navbar = () => {
                                         </span>
                                     </Link>
                                     <Link
-                                        to={'/webapp'}
+                                        to={'/staff'}
                                         className="flex flex-row items-center gap-3 p-4 group hover:bg-sky-500/60 stroke-white border-b border-slate-200 "
                                     >
-                                        <ComputerDesktopIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
+                                        <BuildingOffice2Icon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
                                         <span className="group-hover:text-white">
-                                            Web Apps
+                                            Staff Augmentations
                                         </span>
                                     </Link>
                                     <Link
-                                        to={'/webapp'}
+                                        to={'/mvp'}
                                         className="flex flex-row items-center gap-3 p-4 group hover:bg-sky-500/60 stroke-white border-b border-slate-200 "
                                     >
-                                        <ComputerDesktopIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
+                                        <TrophyIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
                                         <span className="group-hover:text-white">
-                                            Web Apps
+                                            MVP
                                         </span>
                                     </Link>
                                     <Link
-                                        to={'/webapp'}
+                                        to={'/data'}
                                         className="flex flex-row items-center gap-3 p-4 group hover:bg-sky-500/60 stroke-white border-b border-slate-200 "
                                     >
-                                        <ComputerDesktopIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
+                                        <ChartBarIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
                                         <span className="group-hover:text-white">
-                                            Web Apps
+                                            Data Analytics
                                         </span>
                                     </Link>
                                     <Link
-                                        to={'/webapp'}
+                                        to={'/ai'}
                                         className="flex flex-row items-center gap-3 p-4 group hover:bg-sky-500/60 stroke-white  "
                                     >
-                                        <ComputerDesktopIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
+                                        <CpuChipIcon className="w-6 h-6 stroke-sky-400/80 group-hover:stroke-inherit" />
                                         <span className="group-hover:text-white">
-                                            Web Apps
+                                            Generative AI
                                         </span>
                                     </Link>
                                 </div>
