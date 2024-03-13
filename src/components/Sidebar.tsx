@@ -12,11 +12,12 @@ import { Link } from 'react-router-dom';
 
 type SidebarLinkProps = {
     children: React.ReactNode;
+    to: string;
 };
 
-const SidebarLink = ({ children }: SidebarLinkProps) => {
+const SidebarLink = ({ children, to }: SidebarLinkProps) => {
     return (
-        <Link to="/" className="flex flex-row items-center gap-4">
+        <Link to={to} className="flex flex-row items-center gap-4">
             {children}
         </Link>
     );
@@ -76,23 +77,23 @@ const Sidebar = ({ isShow, setIsShow }: SidebarProps) => {
                         </div>
                         {isExpanded && (
                             <div className="flex flex-col gap-7">
-                                <SidebarLink>
+                                <SidebarLink to="/webapp">
                                     <ComputerDesktopIcon className="w-6 h-6" />
                                     <span>Web Apps</span>
                                 </SidebarLink>
-                                <SidebarLink>
+                                <SidebarLink to="/staff">
                                     <BuildingOffice2Icon className="w-6 h-6" />
                                     <span>Staff Augmentation</span>
                                 </SidebarLink>
-                                <SidebarLink>
+                                <SidebarLink to="/mvp">
                                     <TrophyIcon className="w-6 h-6" />
                                     <span>MVP</span>
                                 </SidebarLink>
-                                <SidebarLink>
+                                <SidebarLink to="/data">
                                     <ChartBarIcon className="w-6 h-6" />
                                     <span>Data Analytics</span>
                                 </SidebarLink>
-                                <SidebarLink>
+                                <SidebarLink to="/ai">
                                     <CpuChipIcon className="w-6 h-6" />
                                     <span>Generative AI</span>
                                 </SidebarLink>

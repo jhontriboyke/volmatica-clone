@@ -6,7 +6,7 @@ import { features } from '../../data/data';
 const Staff = () => {
     const { staff } = features;
     return (
-        <main className="p-5 md:px-8 lg:px-12 xl:p-0">
+        <main className="p-5 md:px-8 lg:px-12 xl:p-0 overflow-x-hidden">
             <Featured title={staff.title} image={staff.image} />
             <section className="max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center gap-8 ">
                 <Card className="relative top-0 hover:md:-top-4 transition-all duration-100 w-[500px] h-[250px]">
