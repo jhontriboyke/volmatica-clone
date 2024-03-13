@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-skew {
+    position: relative;
+    width: fit-content;
+}
+
+.title-skew::before {
+    content: '';
+    width: 104%;
+    height: 100%;
+    border: 1px solid;
+    position: absolute;
+    left: -2%;
+    transform: skew(10deg);
+}
+
+.title-skew::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: skyblue;
+    top: -30%;
+    right: -3.2%;
+}
