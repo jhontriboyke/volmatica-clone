@@ -116,7 +116,9 @@ const Navbar = () => {
                             Contact Us
                         </button>
                         <button
-                            className="xl:hidden border border-sky-300 fill-sky-400 hover:bg-sky-400 hover:fill-white transition-colors duration-200  rounded-lg p-2"
+                            className={`${
+                                isShow && 'bg-sky-500/90 fill-white'
+                            } xl:hidden border border-sky-300 fill-sky-400 hover:bg-sky-400 hover:fill-white transition-colors duration-200  rounded-lg p-2`}
                             type="button"
                             title="Navbar Menu"
                             onClick={() => setIsShow(!isShow)}

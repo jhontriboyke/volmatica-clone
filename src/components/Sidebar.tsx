@@ -13,11 +13,15 @@ import { Link } from 'react-router-dom';
 type SidebarLinkProps = {
     children: React.ReactNode;
     to: string;
+    className?: string;
 };
 
-const SidebarLink = ({ children, to }: SidebarLinkProps) => {
+const SidebarLink = ({ children, to, className }: SidebarLinkProps) => {
     return (
-        <Link to={to} className="flex flex-row items-center gap-4">
+        <Link
+            to={to}
+            className={`flex flex-row items-center gap-4 transition-colors duration-100 ${className}`}
+        >
             {children}
         </Link>
     );
@@ -77,23 +81,38 @@ const Sidebar = ({ isShow, setIsShow }: SidebarProps) => {
                         </div>
                         {isExpanded && (
                             <div className="flex flex-col gap-7">
-                                <SidebarLink to="/webapp">
+                                <SidebarLink
+                                    className="hover:text-sky-400/80 stroke-sky-400/80"
+                                    to="/webapp"
+                                >
                                     <ComputerDesktopIcon className="w-6 h-6" />
                                     <span>Web Apps</span>
                                 </SidebarLink>
-                                <SidebarLink to="/staff">
+                                <SidebarLink
+                                    className="hover:text-sky-400/80 stroke-sky-400/80"
+                                    to="/staff"
+                                >
                                     <BuildingOffice2Icon className="w-6 h-6" />
                                     <span>Staff Augmentation</span>
                                 </SidebarLink>
-                                <SidebarLink to="/mvp">
+                                <SidebarLink
+                                    className="hover:text-sky-400/80 stroke-sky-400/80"
+                                    to="/mvp"
+                                >
                                     <TrophyIcon className="w-6 h-6" />
                                     <span>MVP</span>
                                 </SidebarLink>
-                                <SidebarLink to="/data">
+                                <SidebarLink
+                                    className="hover:text-sky-400/80 stroke-sky-400/80"
+                                    to="/data"
+                                >
                                     <ChartBarIcon className="w-6 h-6" />
                                     <span>Data Analytics</span>
                                 </SidebarLink>
-                                <SidebarLink to="/ai">
+                                <SidebarLink
+                                    className="hover:text-sky-400/80 stroke-sky-400/80"
+                                    to="/ai"
+                                >
                                     <CpuChipIcon className="w-6 h-6" />
                                     <span>Generative AI</span>
                                 </SidebarLink>

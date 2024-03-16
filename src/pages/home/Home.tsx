@@ -244,12 +244,18 @@ const Home = () => {
                         </h2>
                     </div>
                     <div className="grid gap-y-4 sm:grid-cols-3 sm:gap-4 md:gap-6">
-                        {techsList.map(({ name, images, desc }) => (
-                            <Card className="relative top-0 hover:md:-top-4 transition-all duration-100">
+                        {techsList.map(({ name, images, desc }, index) => (
+                            <Card
+                                key={index}
+                                className="relative top-0 hover:md:-top-4 transition-all duration-100"
+                            >
                                 <section className="h-full flex flex-col gap-3 p-5 rounded-lg shadow-lg bg-white ">
                                     <div className="grid grid-cols-3 auto-rows-[60px] gap-4">
-                                        {images.map((image) => (
-                                            <div className="bg-sky-400/20 grid items-center rounded-md">
+                                        {images.map((image, index) => (
+                                            <div
+                                                key={index}
+                                                className="bg-sky-400/20 grid items-center rounded-md"
+                                            >
                                                 <img
                                                     className="mx-auto w-8"
                                                     src={image}
@@ -280,7 +286,7 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 items-center justify-center place-items-center auto-rows-[60px]">
                         {ourCustomers.map((customer) => (
-                            <div>
+                            <div key={customer.alt}>
                                 <img src={customer.image} alt={customer.alt} />
                             </div>
                         ))}
